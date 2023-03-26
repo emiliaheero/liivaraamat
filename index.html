@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lorem Ipsum Generator</title>
+
+    <style>
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+#content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script>
+
+      // Select the content container
+const container = document.getElementById("content");
+
+// Set the initial number of paragraphs
+let numParagraphs = 10;
+
+// Define an array of paragraphs
+const paragraphs = [
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam nisl nunc, ac cursus felis hendrerit et. Donec sit amet leo nec enim rutrum fermentum. Integer sed lectus a mi faucibus ultrices. Maecenas justo urna, eleifend id arcu et, tempor sollicitudin dolor. Vivamus vestibulum orci sed tristique dapibus. Aenean euismod rhoncus gravida. Duis diam felis, ultricies a sem eu, porta scelerisque eros.",
+  "Extended kindness trifling remember he confined outlived if. Assistance sentiments yet unpleasing say. Open they an busy they my such high. An active dinner wishes at unable hardly no talked on. Immediate him her resolving his favourite. Wished denote abroad at branch at.",
+  "Kuigi taevas on täna selge ja päikesepaisteline, on õues siiski külm ja talvine ilm, mis paneb mind kõvasti riidesse mähkima enne kodust väljumist. Ma armastan hommikuti oma aega võtta ja kohvi juua, samal ajal kui vaatan aknast välja ja naudin hommikuse päikesevalguse ilu ning looduse ärkamist. Suvi on minu lemmik aastaaeg, sest saan veeta päevi rannas päevitades ja meres ujudes, samal ajal kui kuulen lindude laulu ja tajun sooja päikesekiirte mõju oma nahale."
+];
+
+// Generate and append the initial paragraphs
+for (let i = 0; i < numParagraphs; i++) {
+  const para = document.createElement("p");
+  para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+  container.appendChild(para);
+}
+
+// Define an array of image sources
+const imageSources = [
+  "scribble1.png",
+  "scribble2.png",
+  "scribble3.png",
+  "scribble4.png",
+  "scribble5.png",
+  "scribble6.png",
+  "scribble7.png",
+  "scribble8.png",
+];
+
+// Add a scroll event listener to detect when the user scrolls
+let prevScrollPos = window.pageYOffset;
+document.addEventListener("scroll", function () {
+  const scrollPos = window.pageYOffset;
+
+  // Check if the user has scrolled to the bottom of the page
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    // Generate and append new paragraph and image
+    const para = document.createElement("p");
+    para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+    container.appendChild(para);
+
+              // Generate and append an image with random position probability
+              const rand = Math.random();
+          if (rand < 0.15) {
+            const newImage = document.createElement("img");
+
+            newImage.src =
+              imageSources[Math.floor(Math.random() * imageSources.length)];
+            newImage.alt = "Placeholder Image";
+            newImage.style.width = "100px";
+            newImage.style.height = "100px";
+  
+            const pos = Math.floor(Math.random() * 3) + 1;
+            if (pos === 1) {
+              newImage.style.float = "left";
+              container.appendChild(newImage);
+            } else if (pos === 2) {
+              newImage.style.float = "right";
+              container.appendChild(newImage);
+            } else {
+              container.appendChild(newImage);
+            }
+          }
+  }
+  
+  // Check if the user has scrolled to the top of the page
+if (scrollPos === 0 && prevScrollPos !== 0) {
+  // Generate and prepend new paragraph
+  const para = document.createElement("p");
+  para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+  container.insertBefore(para, container.firstChild);
+
+  // Generate and append an image with random position probability
+            const rand = Math.random();
+            if (rand < 0.15) {
+              const newImage = document.createElement("img");
+
+              newImage.src =
+                imageSources[Math.floor(Math.random() * imageSources.length)];
+              newImage.alt = "Placeholder Image";
+              newImage.style.width = "100px";
+              newImage.style.height = "100px";
+
+              const pos = Math.floor(Math.random() * 3) + 1;
+              if (pos === 1) {
+                newImage.style.float = "left";
+                container.appendChild(newImage);
+              } else if (pos === 2) {
+                newImage.style.float = "right";
+                container.appendChild(newImage);
+              } else {
+                container.appendChild(newImage);
+              }
+            }
+          }
+
+  prevScrollPos = scrollPos;
+});
+
+
+
+  //
+
+          // Generate and append an image with random position probability
+          const rand = Math.random();
+          if (rand < 0.15) {
+            const newImage = document.createElement("img");
+
+            newImage.src =
+              imageSources[Math.floor(Math.random() * imageSources.length)];
+            newImage.alt = "Placeholder Image";
+            newImage.style.width = "100px";
+            newImage.style.height = "100px";
+  
+            const pos = Math.floor(Math.random() * 3) + 1;
+            if (pos === 1) {
+              newImage.style.float = "left";
+              container.appendChild(newImage);
+            } else if (pos === 2) {
+              newImage.style.float = "right";
+              container.appendChild(newImage);
+            } else {
+              container.appendChild(newImage);
+            }
+          }
+
+    </script>
+  </body>
+</html>
