@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The future is digital</title>
+    <title>The future has been eaten and killed by Stuart Little's parents</title>
 
     <style>
 
@@ -50,10 +50,40 @@ const paragraphs = [
   "In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. «Whenever you feel like criticizing any one,» he told me, «just remember that all the people in this world haven't had the advantages that you've had.» He didn't say any more but we've always been unusually communicative in a reserved way, and I understood that he meant a great deal more than that. In consequence I'm inclined to reserve all judgments, a habit that has opened up many curious natures to me and also made me the victim of not a few veteran bores. The abnormal mind is quick to detect and attach itself to this quality when it appears in a normal person, and so it came about that in college I was unjustly accused of being a politician, because I was privy to the secret griefs of wild, unknown men."
 ];
 
-// Generate and append the initial paragraphs
-for (let i = 0; i < numParagraphs; i++) {
+const fonts = [
+  "Arial",
+  "Helvetica",
+  "Georgia",
+  "Times New Roman",
+  "Courier New",
+  "Verdana",
+  "Comic Sans MS",
+  "Trebuchet MS",
+  "Papyrus",
+  "Flow Circular",
+  "Canterbury",
+  "Dosis",
+  "Poppins",
+];
+
+            // // Generate and append the initial paragraphs
+            //   for (let i = 0; i < numParagraphs; i++) {
+            //     const para = document.createElement("p");
+            //     para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+            //     container.appendChild(para);
+            //   }
+
+
+            //   const para = document.createElement("p");
+            //   para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+            //   para.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)];
+            //   container.insertBefore(para, container.firstChild);
+
+  // Generate and append the initial paragraphs
+  for (let i = 0; i < numParagraphs; i++) {
   const para = document.createElement("p");
   para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+  para.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)]; // add font style here
   container.appendChild(para);
 }
 
@@ -69,104 +99,185 @@ const imageSources = [
   "scribble8.png",
 ];
 
-// Add a scroll event listener to detect when the user scrolls
-let prevScrollPos = window.pageYOffset;
-document.addEventListener("scroll", function () {
-  const scrollPos = window.pageYOffset;
+// // Add a scroll event listener to detect when the user scrolls
+// let prevScrollPos = window.pageYOffset;
+// document.addEventListener("scroll", function () {
+//   const scrollPos = window.pageYOffset;
+
+//   // Check if the user has scrolled to the bottom of the page
+//   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+//   // Generate and prepend new paragraph with font styling
+//   const para = document.createElement("p");
+//   para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+//   para.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)];
+//   container.insertBefore(para, container.firstChild);
+
+
+//               // Generate and append an image with random position probability
+//               const rand = Math.random();
+//           if (rand < 0.15) {
+//             const newImage = document.createElement("img");
+
+//             newImage.src =
+//               imageSources[Math.floor(Math.random() * imageSources.length)];
+//             newImage.alt = "Placeholder Image";
+//             newImage.style.width = "100px";
+//             newImage.style.height = "100px";
+  
+//             const pos = Math.floor(Math.random() * 3) + 1;
+//             if (pos === 1) {
+//               newImage.style.float = "left";
+//               container.appendChild(newImage);
+//             } else if (pos === 2) {
+//               newImage.style.float = "right";
+//               container.appendChild(newImage);
+//             } else {
+//               newImage.style.margin = "0 auto";
+//               newImage.style.display = "block";
+//               container.appendChild(newImage);
+//             }
+//           }
+//   }
+  
+//   // Check if the user has scrolled to the top of the page
+// if (scrollPos === 0 && prevScrollPos !== 0) {
+//   // Generate and prepend new paragraph with font styling
+// const para = document.createElement("p");
+// para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+// para.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)];
+// container.insertBefore(para, container.firstChild);
+
+
+//   // Generate and append an image with random position probability
+//             const rand = Math.random();
+//             if (rand < 0.15) {
+//               const newImage = document.createElement("img");
+
+//               newImage.src =
+//                 imageSources[Math.floor(Math.random() * imageSources.length)];
+//               newImage.alt = "Placeholder Image";
+//               newImage.style.width = "100px";
+//               newImage.style.height = "100px";
+
+//               const pos = Math.floor(Math.random() * 3) + 1;
+//               if (pos === 1) {
+//                 newImage.style.float = "left";
+//                 container.appendChild(newImage);
+//               } else if (pos === 2) {
+//                 newImage.style.float = "right";
+//                 container.appendChild(newImage);
+//               } else {
+//                 container.appendChild(newImage);
+//               }
+//             }
+//           }
+
+//   prevScrollPos = scrollPos;
+// });
+
+
+
+//   //
+
+//           // Generate and append an image with random position probability
+//           const rand = Math.random();
+//           if (rand < 0.15) {
+//             const newImage = document.createElement("img");
+
+//             newImage.src =
+//               imageSources[Math.floor(Math.random() * imageSources.length)];
+//             newImage.alt = "Placeholder Image";
+//             newImage.style.width = "100px";
+//             newImage.style.height = "100px";
+  
+//             const pos = Math.floor(Math.random() * 3) + 1;
+//             if (pos === 1) {
+//               newImage.style.float = "left";
+//               container.appendChild(newImage);
+//             } else if (pos === 2) {
+//               newImage.style.float = "right";
+//               container.appendChild(newImage);
+//             } else {
+//               container.appendChild(newImage);
+//             }
+//           }
+
+
+window.addEventListener("scroll", () => {
+  const scrollPos = document.documentElement.scrollTop;
+  const prevScrollPos = window.prevScrollPos || 0;
+
+  // Check if the user has scrolled to the top of the page
+  if (scrollPos === 0 && prevScrollPos !== 0) {
+    // Generate and prepend new paragraph and image
+    const para = document.createElement("p");
+    para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+    para.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)];
+    container.insertBefore(para, container.firstChild);
+
+    // Generate and append an image with random position probability
+    const rand = Math.random();
+    if (rand < 0.5) {
+      const newImage = document.createElement("img");
+
+      newImage.src =
+        imageSources[Math.floor(Math.random() * imageSources.length)];
+      newImage.alt = "Placeholder Image";
+      newImage.style.width = "100px";
+      newImage.style.height = "100px";
+
+      const pos = Math.floor(Math.random() * 3) + 1;
+      if (pos === 1) {
+        newImage.style.float = "left";
+        container.appendChild(newImage);
+      } else if (pos === 2) {
+        newImage.style.float = "right";
+        container.appendChild(newImage);
+      } else {
+        container.appendChild(newImage);
+      }
+    }
+  }
 
   // Check if the user has scrolled to the bottom of the page
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+  if (
+    document.documentElement.scrollHeight - scrollPos ===
+    document.documentElement.clientHeight
+  ) {
     // Generate and append new paragraph and image
     const para = document.createElement("p");
     para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+    para.style.fontFamily = fonts[Math.floor(Math.random() * fonts.length)];
     container.appendChild(para);
 
-              // Generate and append an image with random position probability
-              const rand = Math.random();
-          if (rand < 0.15) {
-            const newImage = document.createElement("img");
+    // Generate and append an image with random position probability
+    const rand = Math.random();
+    if (rand < 0.15) {
+      const newImage = document.createElement("img");
 
-            newImage.src =
-              imageSources[Math.floor(Math.random() * imageSources.length)];
-            newImage.alt = "Placeholder Image";
-            newImage.style.width = "100px";
-            newImage.style.height = "100px";
-  
-            const pos = Math.floor(Math.random() * 3) + 1;
-            if (pos === 1) {
-              newImage.style.float = "left";
-              container.appendChild(newImage);
-            } else if (pos === 2) {
-              newImage.style.float = "right";
-              container.appendChild(newImage);
-            } else {
-              newImage.style.margin = "0 auto";
-              newImage.style.display = "block";
-              container.appendChild(newImage);
-            }
-          }
+      newImage.src =
+        imageSources[Math.floor(Math.random() * imageSources.length)];
+      newImage.alt = "Placeholder Image";
+      newImage.style.width = "100px";
+      newImage.style.height = "100px";
+
+      const pos = Math.floor(Math.random() * 3) + 1;
+      if (pos === 1) {
+        newImage.style.float = "left";
+        container.appendChild(newImage);
+      } else if (pos === 2) {
+        newImage.style.float = "right";
+        container.appendChild(newImage);
+      } else {
+        container.appendChild(newImage);
+      }
+    }
   }
-  
-  // Check if the user has scrolled to the top of the page
-if (scrollPos === 0 && prevScrollPos !== 0) {
-  // Generate and prepend new paragraph
-  const para = document.createElement("p");
-  para.innerText = paragraphs[Math.floor(Math.random() * paragraphs.length)];
-  container.insertBefore(para, container.firstChild);
 
-  // Generate and append an image with random position probability
-            const rand = Math.random();
-            if (rand < 0.15) {
-              const newImage = document.createElement("img");
-
-              newImage.src =
-                imageSources[Math.floor(Math.random() * imageSources.length)];
-              newImage.alt = "Placeholder Image";
-              newImage.style.width = "100px";
-              newImage.style.height = "100px";
-
-              const pos = Math.floor(Math.random() * 3) + 1;
-              if (pos === 1) {
-                newImage.style.float = "left";
-                container.appendChild(newImage);
-              } else if (pos === 2) {
-                newImage.style.float = "right";
-                container.appendChild(newImage);
-              } else {
-                container.appendChild(newImage);
-              }
-            }
-          }
-
-  prevScrollPos = scrollPos;
+  // Store the current scroll position
+  window.prevScrollPos = scrollPos;
 });
 
-
-
-  //
-
-          // Generate and append an image with random position probability
-          const rand = Math.random();
-          if (rand < 0.15) {
-            const newImage = document.createElement("img");
-
-            newImage.src =
-              imageSources[Math.floor(Math.random() * imageSources.length)];
-            newImage.alt = "Placeholder Image";
-            newImage.style.width = "100px";
-            newImage.style.height = "100px";
-  
-            const pos = Math.floor(Math.random() * 3) + 1;
-            if (pos === 1) {
-              newImage.style.float = "left";
-              container.appendChild(newImage);
-            } else if (pos === 2) {
-              newImage.style.float = "right";
-              container.appendChild(newImage);
-            } else {
-              container.appendChild(newImage);
-            }
-          }
 
     </script>
   </body>
